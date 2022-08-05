@@ -1,0 +1,47 @@
+Question # 10
+typedef struct record {
+    float i;
+    struct record *next;
+}R;
+
+void findAndInsert(R *headOfLL, float toFind, float toInsert) {
+ \\write your code below.
+    R* temp = headOfLL;
+    R* temp0 = headOfLL;
+    R* current = malloc(sizeof(R));
+    curren->i = toInsert;
+    while (temp != NULL) {
+        if (temp->index == toFind) {
+            current->next = temp->next;
+            temp->next = current;
+            return;
+        }
+        temp = temp->next;
+    }
+    while(temp0->next != NULL) {
+        temp0 = temp0->next;
+    }
+    temp0->next = current;
+    current->next = NULL;
+}
+
+Question # 11
+
+typedef struct record { 
+    long i;
+    struct record *next;
+    struct record *previous;
+}T;
+
+void addElement(T *headOfDLL, long toAdd) {
+    \\write your code below.
+    T* temp0 = headOfLL;
+    T* current = malloc(sizeof(T));
+    current->i = toAdd;
+    while(temp0->next != NULL) {
+        temp0 = temp0->next;
+    }
+    temp0->next = current;
+    current->previous = temp0;
+    current->next = NULL;
+}
